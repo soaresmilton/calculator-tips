@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background: #95dbd0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.calculator-container {
+  background: white;
+  width: 75%;
+  max-width: 750px;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.left-side {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  gap: 2rem;
+}
+
+.left-side .bill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+}
+
+.left-side .bill-container label {
+  color: #5e7a7d;
+  font-weight: bolder;
+}
+
+.left-side .bill-container #bill-input {
+  padding: 0 1rem;
+  color: #00494d;
+  font-weight: bolder;
+  font-size: 24px;
+  background: #f4fafa;
+  border: none;
+}
+
+.left-side .bill-container ::-webkit-input-placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .bill-container :-ms-input-placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .bill-container ::-ms-input-placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .bill-container ::placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .select-tip-container span {
+  color: #5e7a7d;
+  font-weight: bolder;
+}
+
+.left-side .select-tip-container .tips-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  margin-top: 1rem;
+}
+
+.left-side .select-tip-container .tips-container .tip-value input {
+  background: #00494d;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: bolder;
+  border-radius: 0.2rem;
+  height: 48px;
+  width: 65px;
+  cursor: pointer;
+}
+
+.left-side .select-tip-container .tips-container .tip-value #custom-btn {
+  background: #f4fafa;
+  width: 70px;
+  color: #00494d;
+  padding: 0.3rem;
+}
+
+.left-side .select-tip-container .tips-container .tip-value ::-webkit-input-placeholder {
+  color: #00494d;
+}
+
+.left-side .select-tip-container .tips-container .tip-value :-ms-input-placeholder {
+  color: #00494d;
+}
+
+.left-side .select-tip-container .tips-container .tip-value ::-ms-input-placeholder {
+  color: #00494d;
+}
+
+.left-side .select-tip-container .tips-container .tip-value ::placeholder {
+  color: #00494d;
+}
+
+.left-side .number-of-people-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+}
+
+.left-side .number-of-people-container label {
+  color: #5e7a7d;
+  font-weight: bolder;
+}
+
+.left-side .number-of-people-container #number-of-people-input {
+  padding: 0 1rem;
+  color: #00494d;
+  font-weight: bolder;
+  font-size: 24px;
+  background: #f4fafa;
+  border: none;
+}
+
+.left-side .number-of-people-container ::-webkit-input-placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .number-of-people-container :-ms-input-placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .number-of-people-container ::-ms-input-placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.left-side .number-of-people-container ::placeholder {
+  color: #7f9c9f;
+  font-weight: normal;
+}
+
+.right-side {
+  background: #00494d;
+  width: 50%;
+  height: 100%;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right-side .tip-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.right-side .tip-amount .p-result {
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.right-side .tip-amount .p-result .person-span {
+  font-size: 12px;
+  color: #7f9c9f;
+  font-weight: bolder;
+  display: block;
+}
+
+.right-side .tip-amount .result {
+  color: #26c0ab;
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+.right-side .reset-button-container button {
+  width: 100%;
+  cursor: pointer;
+  height: 38px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0.2rem;
+  background: #5af2dd;
+}
+
+.right-side .reset-button-container :disabled {
+  color: #00494d;
+  background: #00666b;
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=global.css.map */

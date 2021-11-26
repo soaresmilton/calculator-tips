@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "Space Mono", monospace;
+}
+
+$primary: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$very-dark-gray-cyan: hsl(186, 14%, 43%);
+$dark-gray-cyan: hsl(184, 14%, 56%);
+$light-gray-cyan: hsl(185, 41%, 84%);
+$lighter-gray-cian: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+@mixin displayFlex() {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  background: hsl(171, 49%, 72%);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  @include displayFlex();
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.calculator-container {
+  background: $white;
+  width: 75%;
+  max-width: 750px;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  @include displayFlex();
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.left-side {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+
+  @include displayFlex();
+  align-items: unset;
+  gap: 2rem;
+
+  .bill-container {
+    @include displayFlex();
+    align-items: unset;
+
+    label {
+      color: $very-dark-gray-cyan;
+      font-weight: bolder;
+    }
+    
+    #bill-input {
+      padding: 0 1rem;
+      color: $very-dark-cyan;
+      font-weight: bolder;
+      font-size: 24px;
+      background: $lighter-gray-cian;
+      border: none;
+    }
+
+    ::placeholder {
+      color: $dark-gray-cyan;
+      font-weight: normal;
+    }
+
+  }
+
+  .select-tip-container {
+    span {
+      color: $very-dark-gray-cyan;
+      font-weight: bolder;
+    }
+
+    .tips-container {
+      @include displayFlex();
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: unset;
+      margin-top: 1rem;
+
+      .tip-value {
+        input {
+          background: $very-dark-cyan;
+          color: $white;
+          border: none;
+          width: 100%;
+          font-weight: bolder;
+          border-radius: 0.2rem;
+          height: 48px;
+          width: 65px;
+          cursor: pointer;
+        }
+
+        #custom-btn {
+          background: $lighter-gray-cian;
+          width: 70px;
+          color: $very-dark-cyan;
+          padding: 0.3rem;          
+        }
+
+        ::placeholder {
+          color: $very-dark-cyan;
+        }
+
+      
+
+        
+      }
+    }
+
+
+  }
+
+  .number-of-people-container {
+    @include displayFlex();
+    align-items: unset;
+
+    label {
+      color: $very-dark-gray-cyan;
+      font-weight: bolder;
+    }
+    
+    #number-of-people-input {
+      padding: 0 1rem;
+      color: $very-dark-cyan;
+      font-weight: bolder;
+      font-size: 24px;
+      background: $lighter-gray-cian;
+      border: none;
+    }
+
+    ::placeholder {
+      color: $dark-gray-cyan;
+      font-weight: normal;
+    }
+
+  }
+
+  
+}
+
+.right-side {
+  background: $very-dark-cyan;
+  width: 50%;
+  height: 100%;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  @include displayFlex();
+  align-items: unset;
+  justify-content: space-between;
+
+  .tip-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .p-result {
+      color: $white;
+      font-size: 14px;
+      font-weight: bolder;
+
+      .person-span {
+        font-size: 12px;
+        color: $dark-gray-cyan;
+        font-weight: bolder;
+        display: block;
+      }
+    }
+    .result {
+      color: $primary;
+      font-weight: bolder;
+      font-size: 32px;
+    }
+  }
+
+  .reset-button-container {
+    button {
+      width: 100%;
+      cursor: pointer;
+      height: 38px;
+      font-weight: bolder;
+      border: none;
+      border-radius: 0.2rem;
+      background: hsl(172, 85%, 65%);
+    }
+
+    :disabled {
+      color: $very-dark-cyan;
+      background: hsl(183, 100%, 21%);
+      cursor: not-allowed;
+    }
+  }
+}
