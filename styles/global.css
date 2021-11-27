@@ -393,4 +393,65 @@ header {
   background: #00666b;
   cursor: not-allowed;
 }
+
+@media (max-width: 650px) {
+  .container {
+    height: 100%;
+    padding: 2rem 0.5rem;
+  }
+  .calculator-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  .left-side {
+    width: 85%;
+    padding: 0.5rem;
+  }
+  .left-side .bill-container .dolar-icon {
+    width: 12px;
+    position: relative;
+    top: 45px;
+    left: 12px;
+  }
+  .left-side .bill-container #bill-input {
+    height: 50px;
+  }
+  .left-side .select-tip-container .tips-container .tip-value input {
+    height: 50px;
+    width: 95px;
+  }
+  .left-side .select-tip-container .tips-container .tip-value #custom-btn {
+    height: 50px;
+    width: 95px;
+  }
+  .left-side .number-of-people-container #number-of-people-input {
+    height: 50px;
+  }
+  .left-side .number-of-people-container .person-icon {
+    width: 12px;
+    position: relative;
+    top: 40px;
+    left: 12px;
+  }
+  .right-side {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .right-side .reset-button-container button {
+    height: 50px;
+  }
+}
 /*# sourceMappingURL=global.css.map */
