@@ -51,6 +51,8 @@ const calculator = new Calculator;
 
 const tipAmountRes = document.getElementById('tip-amount-value');
 const totalAmountRes = document.getElementById('total-amount');
+const numberOfPeopelInput = document.getElementById('number-of-people-input');
+const spanNumberOfPeople = document.querySelector('.span-nop');
 
 //FIVE PERCENT
 
@@ -58,12 +60,22 @@ btnFivePercent.addEventListener('click', fivePercentCalc);
 
 function fivePercentCalc(tipAmount, totalAmount) {
 
-  if (calculator.numberOfPeople() === 0) return window.alert('Não pode ser 0');
+  if (calculator.numberOfPeople() === 0 || !calculator.numberOfPeople()) {
+    numberOfPeopelInput.style.border = '1px solid rgb(218, 15, 15)';
+    numberOfPeopelInput.style.borderRadius = '0.3rem';
+    spanNumberOfPeople.classList.remove('sr-only');
+    return;
+  }
+
+  spanNumberOfPeople.classList.add('sr-only');
+  numberOfPeopelInput.style.border = 'none';
+
+
 
   reset.disabled = false;
 
   tipAmount = (calculator.bill() * FIVE_PERCENT) / calculator.numberOfPeople();
-  totalAmount = (calculator.bill()  / calculator.numberOfPeople()) + tipAmount;
+  totalAmount = (calculator.bill() / calculator.numberOfPeople()) + tipAmount;
 
   return (
     tipAmountRes.innerHTML = `$ ${tipAmount.toFixed(2)}`,
@@ -77,13 +89,21 @@ btnTenPercent.addEventListener('click', tenPercentCalc);
 
 function tenPercentCalc(tipAmount, totalAmount) {
 
-  if (calculator.numberOfPeople() === 0) return window.alert('Não pode ser 0');
+  if (calculator.numberOfPeople() === 0 || !calculator.numberOfPeople()) {
+    numberOfPeopelInput.style.border = '1px solid rgb(218, 15, 15)';
+    numberOfPeopelInput.style.borderRadius = '0.3rem';
+    spanNumberOfPeople.classList.remove('sr-only');
+    return;
+  }
+
+  spanNumberOfPeople.classList.add('sr-only');
+  numberOfPeopelInput.style.border = 'none';
 
   reset.disabled = false;
 
   tipAmount = (calculator.bill() * TEN_PERCENT) / calculator.numberOfPeople();
   console.log(tipAmount)
-  totalAmount = (calculator.bill()  / calculator.numberOfPeople()) + tipAmount;
+  totalAmount = (calculator.bill() / calculator.numberOfPeople()) + tipAmount;
 
   return (
     tipAmountRes.innerHTML = `$ ${tipAmount.toFixed(2)}`,
@@ -97,12 +117,20 @@ btnFifteenPercent.addEventListener('click', fifteenPercentCalc);
 
 function fifteenPercentCalc(tipAmount, totalAmount) {
 
-  if (calculator.numberOfPeople() === 0) return window.alert('Não pode ser 0');
+  if (calculator.numberOfPeople() === 0 || !calculator.numberOfPeople()) {
+    numberOfPeopelInput.style.border = '1px solid rgb(218, 15, 15)';
+    numberOfPeopelInput.style.borderRadius = '0.3rem';
+    spanNumberOfPeople.classList.remove('sr-only');
+    return;
+  }
+
+  spanNumberOfPeople.classList.add('sr-only');
+  numberOfPeopelInput.style.border = 'none';
 
   reset.disabled = false;
 
   tipAmount = (calculator.bill() * FIFTEEN_PERCENT) / calculator.numberOfPeople();
-    totalAmount = (calculator.bill()  / calculator.numberOfPeople()) + tipAmount;
+  totalAmount = (calculator.bill() / calculator.numberOfPeople()) + tipAmount;
 
   return (
     tipAmountRes.innerHTML = `$ ${tipAmount.toFixed(2)}`,
@@ -116,12 +144,20 @@ btnTwentyFivePercent.addEventListener('click', twentyFivePercentCalc);
 
 function twentyFivePercentCalc(tipAmount, totalAmount) {
 
-  if (calculator.numberOfPeople() === 0) return window.alert('Não pode ser 0');
+  if (calculator.numberOfPeople() === 0 || !calculator.numberOfPeople()) {
+    numberOfPeopelInput.style.border = '1px solid rgb(218, 15, 15)';
+    numberOfPeopelInput.style.borderRadius = '0.3rem';
+    spanNumberOfPeople.classList.remove('sr-only');
+    return;
+  }
+
+  spanNumberOfPeople.classList.add('sr-only');
+  numberOfPeopelInput.style.border = 'none';
 
   reset.disabled = false;
 
   tipAmount = (calculator.bill() * TWENTYFIVE_PERCENT) / calculator.numberOfPeople();
-  totalAmount = (calculator.bill()  / calculator.numberOfPeople()) + tipAmount;
+  totalAmount = (calculator.bill() / calculator.numberOfPeople()) + tipAmount;
 
   return (
     tipAmountRes.innerHTML = `$ ${tipAmount.toFixed(2)}`,
@@ -135,12 +171,19 @@ btnFiftyPercent.addEventListener('click', fiftyPercentCalc);
 
 function fiftyPercentCalc(tipAmount, totalAmount) {
 
-  if (calculator.numberOfPeople() === 0) return window.alert('Não pode ser 0');
+  if (calculator.numberOfPeople() === 0 || !calculator.numberOfPeople()) {
+    numberOfPeopelInput.style.border = '1px solid rgb(218, 15, 15)';
+    numberOfPeopelInput.style.borderRadius = '0.3rem';
+    spanNumberOfPeople.classList.remove('sr-only');
+    return;
+  }
 
+  spanNumberOfPeople.classList.add('sr-only');
+  numberOfPeopelInput.style.border = 'none';
   reset.disabled = false;
 
   tipAmount = (calculator.bill() * FIFTY_PERCENT) / calculator.numberOfPeople();
-  totalAmount = (calculator.bill()  / calculator.numberOfPeople()) + tipAmount;
+  totalAmount = (calculator.bill() / calculator.numberOfPeople()) + tipAmount;
 
   return (
     tipAmountRes.innerHTML = `$ ${tipAmount.toFixed(2)}`,
@@ -154,16 +197,22 @@ btnCustom.addEventListener('click', customPercentCalc);
 
 function customPercentCalc(tipAmount, totalAmount) {
 
-  if (calculator.numberOfPeople() === 0) return window.alert('Não pode ser 0');
+  if (calculator.numberOfPeople() === 0 || !calculator.numberOfPeople()) {
+    numberOfPeopelInput.style.border = '1px solid rgb(218, 15, 15)';
+    numberOfPeopelInput.style.borderRadius = '0.3rem';
+    spanNumberOfPeople.classList.remove('sr-only');
+    return;
+  }
 
+  spanNumberOfPeople.classList.add('sr-only');
+  numberOfPeopelInput.style.border = 'none';
   reset.disabled = false;
 
-  let customValue = Number(window.prompt('Please, informa a TIP value (%):'));
+  let customValue = Number(window.prompt('Please, inform a TIP value (%):'));
   customValue = customValue / 100;
-  console.log(customValue)
 
   tipAmount = (calculator.bill() * customValue) / calculator.numberOfPeople();
-  totalAmount = (calculator.bill()  / calculator.numberOfPeople()) + tipAmount;
+  totalAmount = (calculator.bill() / calculator.numberOfPeople()) + tipAmount;
   ;
   return (
     tipAmountRes.innerHTML = `$ ${tipAmount.toFixed(2)}`,

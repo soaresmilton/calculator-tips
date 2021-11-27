@@ -26,87 +26,92 @@
 </head>
 
 <body>
-<div class="container">
-  <header class="title">
-    <img src="./images/logo.svg" alt="">
-  </header>
+  <div class="container">
+    <header class="title">
+      <img src="./images/logo.svg" alt="">
+    </header>
 
-  <section class="calculator-container">
-    <div class="left-side">
-      <div class="bill-container">
-        <label for="bill">Bill</label>
-        <input type="number" name="bill" id="bill-input" placeholder="0" title="Bill amount" value="0">
+    <section class="calculator-container">
+      <div class="left-side">
+        <div class="bill-container">
+          <label for="bill">Bill</label>
+          <img src="./images/icon-dollar.svg" alt="" class="dolar-icon">
+          <input type="text" name="bill" id="bill-input" placeholder="0" title="Bill amount">
+        </div>
+
+        <div class="select-tip-container">
+          <span>Select Tip %</span>
+          <div class="tips-container">
+            <div class="tip-value">
+              <input class="btnTips" type="button" value="5%" id="btnFivePercent">
+            </div>
+            <div class="tip-value">
+              <input class="btnTips" type="button" value="10%" id="btnTenPercent">
+            </div>
+            <div class="tip-value">
+              <input class="btnTips" type="button" value="15%" id="btnFifteenPercent">
+            </div>
+            <div class="tip-value">
+              <input class="btnTips" type="button" value="25%" id="btnTwentyFivePercent">
+            </div>
+            <div class="tip-value">
+              <input class="btnTips" type="button" value="50%" id="btnFiftyPercent">
+            </div>
+            <div class="tip-value">
+              <input id="custom-btn" type="text" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+
+        <div class="number-of-people-container">
+          <div class="span-container">
+            <label for="number-of-people">Number of People</label>
+            <span class="span-nop sr-only">Can't be zero</span>
+          </div>
+          <img src="./images/icon-person.svg" alt="person icon" class="person-icon">
+          <input type="text" name="number-of-people" id="number-of-people-input" placeholder="0"
+            title="Number of people" required>
+        </div>
+
       </div>
+      <div class="right-side">
+        <div>
+          <div class="tip-amount">
+            <p class="p-result">
+              Tip Amount
+              <span class="person-span">/ person</span>
+            </p>
+            <div class="result" id="tip-amount-value">
+              $0.00
+            </div>
+          </div>
 
-      <div class="select-tip-container">
-        <span>Select Tip %</span>
-        <div class="tips-container">
-          <div class="tip-value">
-            <input class="btnTips" type="button" value="5%" id="btnFivePercent" onclick="">
+          <div class="tip-amount">
+            <p class="p-result">
+              Total
+              <span class="person-span">/ person</span>
+            </p>
+            <div class="result" id="total-amount">
+              $0.00
+            </div>
           </div>
-          <div class="tip-value">
-            <input class="btnTips" type="button" value="10%" id="btnTenPercent">
-          </div>
-          <div class="tip-value">
-            <input class="btnTips" type="button" value="15%" id="btnFifteenPercent">
-          </div>
-          <div class="tip-value">
-            <input class="btnTips" type="button" value="25%" id="btnTwentyFivePercent">
-          </div>
-          <div class="tip-value">
-            <input class="btnTips" type="button" value="50%" id="btnFiftyPercent">
-          </div>
-          <div class="tip-value">
-            <input id="custom-btn" type="text" placeholder="Custom">
-          </div>
+        </div>
+
+        <div class="reset-button-container">
+          <button id="reset" disabled>RESET</button>
         </div>
       </div>
 
-      <div class="number-of-people-container">
-        <label for="number-of-people">Number of People</label>
-        <input type="number" name="number-of-people" id="number-of-people-input" placeholder="0"
-          title="Number of people" value="0">
-      </div>
+    </section>
 
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/soaresmilton/" target="_blank">Milton Soares</a>.
     </div>
-    <div class="right-side">
-    <div>
-      <div class="tip-amount">
-        <p class="p-result">
-          Tip Amount
-          <span class="person-span">/ person</span>
-        </p>
-        <div class="result" id="tip-amount-value">
-          $0.00
-        </div>
-      </div>
-
-      <div class="tip-amount">
-        <p class="p-result">
-          Total
-          <span class="person-span">/ person</span>
-        </p>
-        <div class="result" id="total-amount">
-          $0.00
-        </div>
-      </div>
-    </div>
-
-      <div class="reset-button-container">
-        <button id="reset" disabled>RESET</button>
-      </div>
-    </div>
-
-  </section>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.linkedin.com/in/soaresmilton/" target="_blank">Milton Soares</a>.
   </div>
-</div>
-  
 
-<script src="./scripts/script.js"></script>
+
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
